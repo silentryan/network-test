@@ -14,8 +14,8 @@ func ReadIPs(file string) []string {
 }
 
 // from given IP
-func Ping(ips []string) {
-	pinger, err := ping.NewPinger(ips[0])
+func Ping(ip string) {
+	pinger, err := ping.NewPinger(ip)
 	if err != nil {
 		panic(err)
 	}
@@ -43,6 +43,16 @@ func Ping(ips []string) {
 	err = pinger.Run()
 	if err != nil {
 		panic(err)
+	}
+}
+
+// run ping test batchly
+func PingF(ips []string) {
+	if len(ips) == 0 {
+		return
+	}
+	for _, ip := range ips {
+		Ping(ip)
 	}
 }
 
