@@ -1,14 +1,16 @@
-package ping
+package protocols
 
+// This package will provide:
+// 1. ping accessible
+// 2. ping average latency
+// 3. traceroute: route path checking
 import (
 	"fmt"
-
 	"github.com/go-ping/ping"
 )
 
 // from given IP list(file) to get a IP String Array
 func ReadIPs(file string) []string {
-
 	var ips []string
 	return ips
 }
