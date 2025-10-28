@@ -23,3 +23,7 @@ func ReadLocalNetwork() *Localnet {
 
 	return localnet
 }
+
+func GetIntofDefult() string {
+	return ""
+}

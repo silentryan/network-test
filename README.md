@@ -1,3 +1,7 @@
+Target: 
+# input
+1. The order of args: `Program Target Input Output`
+
 # output
 
 # Test
@@ -11,3 +15,5 @@ Supported protocols:
 3. UDP
 4. DHCP
 5. HTTP
+
+
