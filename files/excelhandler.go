@@ -21,7 +21,7 @@ import (
 
 // Get data of specific columns by row index
 func GetContentByCols(fname string, sheet string, cols []string) [][]string {
-	var values [][]string = make([][]string, 1000)
+	var values [][]string = make([][]string, 2000)
 
 	// get file
 	f, err := excelize.OpenFile(fname)
@@ -44,7 +44,7 @@ func GetContentByCols(fname string, sheet string, cols []string) [][]string {
 	// loop rows and get filter specific cols
 	// except the first row (header)
 	for i := 1; i < len(rows); i++ {
-		values[i] = make([]string, 0, 100)
+		values[i] = make([]string, 100)
 		row := rows[i]
 		for _, colIndex := range colsIndex {
 			// 检查列索引是否在行的范围内，避免索引越界
